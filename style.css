@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 nav{
-    background-color: rgb(215, 0, 0);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     justify-content: space-between;
     align-items: center;
     display: flex;
@@ -54,30 +54,25 @@ nav{
 
 
 .container{
-    width: 100%;
+    margin-top: 20px;
     background-color: royalblue;
-
     background-image: url('/image/header.gif');
-    height: 600px;
+    height: 100vh;
     background-size: cover;
 }
 .container h1{
-    padding-top: 250px;
+    padding-top: 50vh;
 
     text-align: center;
     color: white;
 
 }
 
-.content {
-   
-    width: 500px;
-    background-color: aqua;
-}
-.content h2{
-    padding: 20px;
-    width: 450px;
-    font-size: 18px;
+
+#content h2{
+    margin: 20px;
+    padding: 10px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -86,9 +81,149 @@ nav{
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 10px;
     margin: 30px;
+    
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+}
+.text-box p{
+   text-indent: 50px;
+}
+
+#question h1{
+    text-align: center;
+}
+
+
+.flutter {
     align-items: center;
+    margin: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.flutter .text-flutter{
+    width: 500px;
+}
+.flutter .text-flutter p{
+    text-indent: 30px;
+}
+.flutter img{
+    width: 50%;
+}
+
+.java {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+
+}
+.java img{
+    width: 80%;
+}
+.java .text-java p{
+    text-indent: 30px;
+}
+
+
+
+
+.c-programming{
+    margin: 10px;
+    justify-content: space-around;
+    display: flex;
+    align-items: center;
+}
+.c-programming .text-c p{
+    width: 600px;
+    text-indent: 30px;
+
+}
+.c-programming img{
+    width: 50%;
+}
+
+
+
+.c-plus{
+    margin: 100px;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+.c-plus img{
+    width: 25%;
+}
+
+.c-plus .text-cplus p{
+    text-indent: 30px;
+}
+
+.html{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+.text-html{
+    width: 500px    ;
+}
+.text-html p{
+    text-indent: 30px;
+}
+
+
+
+
+
+.css {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.css .text-css p{
+    text-indent: 30px;
+
+}
+.css img{
+    width: 45%;
+}
+
+
+
+
+.node{
+    margin: 100px;
     justify-content: center;
-    height: 300px;
-    width: 100%;
-    background-color: gray;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+}
+.node img{
+
+    margin: 30px;
+    padding: 50px;
+    width: 50%;
+}
+
+.text-node p{
+    width: 500px;
+    text-indent: 30px;
+}
+
+.react{
+    margin: 20px;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+}
+
+.react img{
+    width: 50%;
+}
+.text-react p{
+    text-indent: 30px;
+    width: 500px;
 }
