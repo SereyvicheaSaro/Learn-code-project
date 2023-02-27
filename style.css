@@ -60,13 +60,7 @@ nav{
     height: 100vh;
     background-size: cover;
 }
-.container h1{
-    padding-top: 50vh;
 
-    text-align: center;
-    color: white;
-
-}
 
 
 #content h2{
@@ -98,7 +92,7 @@ nav{
     align-items: center;
     margin: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .flutter .text-flutter{
@@ -271,3 +265,126 @@ footer img{
     background-color: antiquewhite;
     margin-left: 100px;
 }
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        height: 300px;
+        background-image: url('./image/header.gif');
+    }
+  
+    .flutter{
+        margin: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .flutter img{
+        width: 100%;
+    }
+    .flutter .text-flutter{
+        font-size: 15px;
+    }
+    .flutter .text-flutter p{
+        width: 250px;
+    }
+    .java .text-java p{
+        font-size: 15px ;
+    }
+
+    .c-programming{
+        margin: 20px;
+    }
+    .c-programming .text-c p{
+        width: 350px;
+        font-size: 15px;
+    }
+    .c-programming img{
+        width: 60%;
+        margin-left: 30px;
+    }
+
+
+
+    .c-plus .text-cplus p{
+        font-size: 15px;
+    }
+    .c-plus img{
+        width: 50%;
+    }
+
+
+    .html{
+        margin: 20px;
+
+    }
+    .html .text-html p{
+        width: 250px;
+        font-size: 15px;
+    }
+    .html img{
+        width: 80%;
+    }
+
+
+
+    .css {
+        margin: 20px;
+    }
+    .css .text-css p{
+        font-size: 15px;
+
+    }
+    .css img{
+        width: 80%;
+    }
+
+
+    .node {
+        margin: 20px;
+
+    }
+    .node img{
+        width: 80%;
+    }
+    .node .text-node p{
+        width: 250px;
+        font-size: 15px;
+    }
+
+
+
+    .react {
+        margin: 20px;
+    }
+    .react img{
+        width: 80%;
+    }
+    .react .text-react p {
+        width: 250px;
+        font-size: 15px;
+    }
+
+    .flutter{
+        display: flex;
+        align-items: center;
+    }
+
+
+    .list-footer{
+        margin-top: 23px;
+        width: 800px;
+    }
+    .footer-img img{
+        width: 50%;
+    }
+
+    .list-footer ul li a{
+        font-size: 15px;
+    }
+
+
+
+}
+
+
+
