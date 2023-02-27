@@ -227,3 +227,36 @@ nav{
     text-indent: 30px;
     width: 500px;
 }
+
+
+
+footer{
+    background-color: rgb(221, 221, 221);
+    align-items: center;
+    justify-items: center;
+    display: flex;
+    justify-content:space-evenly;
+    height: 250px;
+}
+footer img{
+    width: 20%;
+}
+.list-footer ul{
+    list-style-type: none;
+}
+
+.list-footer ul li {
+    padding: 10px;
+}
+
+.list-footer ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+
+}
+
+
+.yt{
+    margin-left: 20px;
+}
