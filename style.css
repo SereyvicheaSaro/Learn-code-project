@@ -218,11 +218,13 @@ nav{
     align-items: center;
     justify-content: space-around;
     display: flex;
+    text-justify: auto;
+}
+.react img{
+    width: 30%;
 }
 
-.react img{
-    width: 50%;
-}
+
 .text-react p{
     text-indent: 30px;
     width: 500px;
@@ -235,7 +237,7 @@ footer{
     align-items: center;
     justify-items: center;
     display: flex;
-    justify-content:space-evenly;
+    justify-content: space-between;
     height: 250px;
 }
 footer img{
@@ -259,4 +261,13 @@ footer img{
 
 .yt{
     margin-left: 20px;
+}
+.list-footer{
+    display: flex;
+    /* background-color: aqua; */
+    margin-right: 200px;
+}
+.footer-img img{
+    background-color: antiquewhite;
+    margin-left: 100px;
 }
