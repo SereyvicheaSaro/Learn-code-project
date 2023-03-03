@@ -54,6 +54,14 @@ nav{
     background-color: white;
     color: black;
 }
+
+
+.list ul li a.active{
+    padding: 10px;
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
 .icon{
     display: none;
 }   
@@ -312,24 +320,39 @@ footer img{
     }
     .icon i{
         color: white;
+        font-size: 30px;
 
     }
 
     .list{
-        height: 300px;
+        height: 0;
         position:absolute;
         top: 30px;
-
+        right: 0;
+        left: 0;
         width: 100%;
         background-color: rgb(0, 0, 0);
         flex-direction: column;
+        transition: 0.3s;
+        overflow: hidden;
     }
     .list ul {
+        margin-top: 50px;
+        transition: 0.2s;
         display: block;
         text-align: center;
+        opacity: 1;
     }
     .list ul li a{
         margin-bottom: 20px;
+    }
+    .list.active {
+        transition: all 0.3s ease-in-out;
+         height: 300px;
+    }
+
+    #logo h1{
+        font-size: 30px;
     }
     .container{
         height: 300px;
