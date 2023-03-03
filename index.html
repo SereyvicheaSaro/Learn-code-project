@@ -14,43 +14,24 @@
 <body>
     <nav>
         <div id="logo">
-          <img src="./image/logo.jpg" alt="logo">
+          <h1>Learn Code</h1>
         </div>
         
-          <div id="list">
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Home
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item " href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  
-                </ul>
-              </div>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  About us
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item " href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  
-                </ul>
-              </div>
-              <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Contact
-                </button>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  
-                </ul>
-              </div>
+          <div class="list">
+            <ul>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">About us</a>
+              </li>
+              <li>
+                <a href="">Conteact</a>
+              </li>
+            </ul>
+          </div>
+          <div class="icon">
+            <i class="fa-solid fa-bars"></i>
           </div>
         
       </nav>
@@ -58,6 +39,11 @@
 
     <div class="container">
 
+    </div>
+
+    <div class="logo">
+      <img src="/image/logo.jpg" alt="learn code">
+      <h1>Learn Code</h1>
     </div>
 
     <div id="content">
@@ -222,5 +208,13 @@ It is essential to have a background in computer memory mechanisms because it is
       </div>
 
     </footer>
+
+
+    <script>
+      menu = document.querySelector(".list");
+      menu.onlick = function(){
+        
+      }
+    </script>
 </body>
 </html>
