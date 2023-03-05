@@ -510,34 +510,6 @@ footer{
         margin-top: 100px;
         font-size: 20px;
     }
-    .flutter img{
-        width: 40%;
-    }
-    .c-programming img{
-        margin-left: 10px 100px ;
-    }
-    .html img{
-        margin: 10px 220px;
-    }
-    .node img{
-        width: 40%;
-        margin: 10px 200px;
-    }
-
-    footer{
-        display: grid;
-        justify-content: space-between;
-    }
-
- 
-    .footer-img img{
-        display: none;
-    }
-
-    .list-footer ul li a{
-        font-size: 20px;
-    }
-
     .list-footer ul li a:hover{
         padding: 10px;
         background-color: black;
