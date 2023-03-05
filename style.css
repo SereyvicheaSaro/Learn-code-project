@@ -12,6 +12,7 @@ nav{
     display: flex;
     justify-items: center;
     background-color: black;
+    height: 100px;
 }
 
 #list {
@@ -67,13 +68,15 @@ nav{
 }   
 
 
-
-.container{
+.container img{
     margin-top: 20px;
-    background-color: royalblue;
-    background-image: url('/image/header.gif');
-    height: 100vh;
-    background-size: cover;
+    width: 100%;
+}
+
+.container-box{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
 }
 
 
@@ -136,81 +139,140 @@ nav{
 
 
 .flutter {
-    align-items: center;
-    margin: 10px;
-    display: flex;
-    justify-content: center;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    margin: 20px;
 }
 
 .flutter .text-flutter{
-    width: 500px;
+    margin: 20px;
+    padding: 10px;
+}
+.flutter .text-flutter h1{
+    margin: 20px;
+    font-size: 30px;
+    padding: 10px;
+
 }
 .flutter .text-flutter p{
+    padding: 10px;
     text-indent: 30px;
 }
 .flutter img{
-    width: 50%;
+    margin: 10px 180px;
+    padding:10px;
+    width: 35%;
 }
 
 .java {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    justify-content: center;
     margin: 10px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
+    padding: 10px;
+    display: grid;
+    
 
 }
 .java img{
+    margin: 10px 50px;
     width: 80%;
+    padding: 10px;
 }
+
 .java .text-java p{
+    margin: 20px;
+    padding: 10px;
     text-indent: 30px;
 }
 
+.java .text-java h1{
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
+}
 
 
 
 .c-programming{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    margin: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
     margin: 10px;
-    justify-content: space-around;
-    display: flex;
+    display: grid;
     align-items: center;
 }
 .c-programming .text-c p{
-    width: 600px;
+    margin: 20px;
+    padding: 10px;
     text-indent: 30px;
 
 }
 .c-programming img{
-    width: 50%;
+    margin: 10px 200px;
+    width: 30%;
 }
 
+.c-programming .text-c h1{
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
+}
 
 
 .c-plus{
-    margin: 100px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    
+    margin: 10px;
     align-items: center;
-    display: flex;
-    justify-content: space-around;
+    display: grid;
+    justify-content:center;
 
 }
 .c-plus img{
+    margin: 10px 250px;
     width: 25%;
 }
 
 .c-plus .text-cplus p{
+    margin: 20px;
     text-indent: 30px;
+    padding: 10px;
+}
+.text-cplus h1{
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
 }
 
 .html{
-    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    
+    display: grid;
     align-items: center;
-    justify-content: space-around;
+    justify-content:center;
     margin: 10px;
 }
-.text-html{
-    width: 500px    ;
+.html img{
+    width: 35%;
+    margin: 10px 180px;
+}
+.text-html h1{
+    margin: 20px;
+    padding: 10px ;
+    font-size: 25px;
 }
 .text-html p{
+    margin: 20px;
+    padding: 10px;
     text-indent: 30px;
 }
 
@@ -219,57 +281,81 @@ nav{
 
 
 .css {
-    margin: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+    display: grid;
 }
 .css .text-css p{
+    margin: 20px;
+    padding: 10px;
     text-indent: 30px;
 
 }
+.text-css h1{
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
+}
 .css img{
-    width: 45%;
+    margin: 10px 130px;
+    width: 60%;
 }
 
 
 
 
 .node{
-    margin: 100px;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    display: flex;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 10px;
+    display: grid;
 }
 .node img{
 
-    margin-left: 50px;
+    margin: 10px 100px;
     width: 60%;
 }
 
 .text-node p{
-    width: 500px;
+    margin: 20px;
+    padding: 10px;
     text-indent: 30px;
+}
+.text-node h1{
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
 }
 
 .react{
-    margin: 20px;
-    align-items: center;
-    justify-content: space-around;
-    display: flex;
-    text-justify: auto;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    margin: 10px;
+
+    display: grid;
+
 }
 .react img{
-    width: 30%;
+    margin: 10px 100px;
+    width: 60%;
 }
 
 
 .text-react p{
+    margin: 20px;
     text-indent: 30px;
-    width: 500px;
+    padding: 10px;
 }
 
+.text-react h1{
+    margin: 20px;
+    font-size: 25px;
+    padding: 10px;
+}
 
 
 footer{
@@ -311,9 +397,66 @@ footer img{
     background-color: antiquewhite;
     margin-left: 100px;
 }
+@media screen and(max-width: 1200px) {
+    *{
+        background-color: red;
+    }
+    .container-box{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+/* tablat */
+@media screen and (max-width : 1023px) and (min-width:768px) {
+    .container{
+        height: 70vh;
+    }
+    .container-box{
+        margin: 20px;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
+@media screen and (max-width: 948px) {
+    .container-box{
+        grid-template-columns: repeat(1,1fr);
+    }
 
-@media screen and (max-width: 768px) {
+    .flutter img{
+        width: 30%;
+        margin: 10px 270px;
+    }
+    .java img{
+        width: 60%;
+        margin: 10px 160px;
+    }
+    .c-programming img{
+        margin: 10px 290px;
+    }
+    .c-plus img{
+        margin: 10px 320px;
+    }
+    .html img{
+        margin: 10px 280px;
+    }
+    .css img{
+        margin: 10px 170px;
+    }
+    .node img{
+        width: 40%;
+        margin: 10px 250px;
+    }
+    .react img{
+        width: 40%;
+        margin: 10px 250px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .container-box{
+        margin: 30px;
+        grid-template-columns: repeat(1,1fr);
+    }
     .icon{
         display: block;
         margin-right: 20px;
@@ -362,100 +505,18 @@ footer img{
         margin-top: 100px;
         font-size: 20px;
     }
-    .flutter{
-        margin: 20px;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    }
     .flutter img{
-        width: 100%;
-    }
-    .flutter .text-flutter{
-        font-size: 15px;
-    }
-    .flutter .text-flutter p{
-        width: 250px;
-    }
-    .java .text-java p{
-        font-size: 15px ;
-    }
-
-    .c-programming{
-        margin: 20px;
-    }
-    .c-programming .text-c p{
-        width: 200px;
-        font-size: 15px;
+        width: 40%;
     }
     .c-programming img{
-        width: 60%;
-        margin-left: 30px;
-    }
-
-
-
-    .c-plus .text-cplus p{
-        font-size: 15px;
-    }
-    .c-plus img{
-        width: 50%;
-    }
-
-
-    .html{
-        margin: 20px;
-
-    }
-    .html .text-html p{
-        width: 250px;
-        font-size: 15px;
+        margin-left: 10px 100px ;
     }
     .html img{
-        width: 80%;
-    }
-
-
-
-    .css {
-        margin: 20px;
-    }
-    .css .text-css p{
-        font-size: 15px;
-
-    }
-    .css img{
-        width: 80%;
-    }
-
-
-    .node {
-        margin: 20px;
-
+        margin: 10px 220px;
     }
     .node img{
-        width: 80%;
-    }
-    .node .text-node p{
-        width: 250px;
-        font-size: 15px;
-    }
-
-
-
-    .react {
-        margin: 20px;
-    }
-    .react img{
-        width: 80%;
-    }
-    .react .text-react p {
-        width: 250px;
-        font-size: 15px;
-    }
-
-    .flutter{
-        display: flex;
-        align-items: center;
+        width: 40%;
+        margin: 10px 200px;
     }
 
     footer{
@@ -469,143 +530,29 @@ footer img{
     }
 
     .list-footer ul li a{
-        font-size: 10px;
+        font-size: 20px;
     }
 
     .list-footer ul li a:hover{
         padding: 10px;
         background-color: black;
         color: white;
+        border-radius: 4px;
         transition: all 0.3s;
 
     }
 
     .list-footer ul li h3{
-        font-size: 15px;
+        font-size: 25px;
         width: 100%;
     }
-
-
-
-}
-
-
-
-@media screen and (max-width: 1023px) {
-
-
-
-    #content{
-        margin: 20px;
-    }
-    .flutter img{
-        margin-left: 50px;
-        width: 50%;
-    } 
-    .flutter .text-flutter{
-
-    }   
-    .java img{
-        width: 100%;
-    }
-    .java .text-java{
-        margin-right: 20px;
-    }
-
-    .react img{
-        width: 50%;
-    }
-    .react .text-react{
-        margin-right: 20px;
+    .list-footer ul li h3:hover{
+        color: red;
+        cursor: pointer;
     }
 
 
-    .css .text-css{
-        margin-right: 20px;
-    }
 
-
-    .flutter .text-flutter{
-        margin-left: 20px;
-    }
-    .html .text-html{
-        margin-left: 20px;
-    }
-    .c-programming .text-c{
-        margin-left: 20px;
-    }
-
-    .node img{
-        width: 100%;
-    }
-
-
-    footer{
-        display: grid;
-    }
-    .footer-img img{
-        display: none;
-    }
-
-    .list-footer ul li a:hover{
-        padding: 10px;
-        transition: all 0.3s;
-        background-color: black;
-        color: white;
-    }
-}
-
-
-
-@media screen and (max-width: 480px) {
-    #content h2{
-        font-size: 10px;
-    
-    }
-    #question h1{
-        font-size: 15px;
-    }
-    .text-box p{
-        font-size: 10px;
-    }
-    .text-flutter h1 {
-        font-size: 20px;
-    }
-    .text-flutter p{
-        font-size: 15px;
-    }
-    .flutter{
-
-        display: grid;
-    }
-
-
-    .java{
-        display: grid;
-    }
-
-    .java .text-java h1{
-        font-size: 15px;
-    }
-    .java .text-java p{
-        font-size: 10px;
-    }
-
-
-    .c-programming{
-        align-items: center;
-        justify-content: center;
-        display: grid;
-    }
-    .c-programming img{
-        width: 50%;
-    }
-    .text-c h1 {
-        font-size: 15px;
-    }
-    .text-c p{
-        font-size: 10px;
-    }
 }
 
 
