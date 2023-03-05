@@ -69,7 +69,7 @@ nav{
 
 
 .container img{
-    margin-top: 20px;
+    
     width: 100%;
 }
 
@@ -359,15 +359,12 @@ nav{
 
 
 footer{
-    background-color: rgb(221, 221, 221);
-    align-items: center;
-    justify-items: center;
-    display: flex;
-    justify-content: space-between;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     height: 250px;
 }
-footer img{
-    width: 20%;
+
+.list-footer{
+    justify-content: center;
 }
 .list-footer ul{
     list-style-type: none;
@@ -377,11 +374,27 @@ footer img{
     padding: 10px;
 }
 
+.list-footer ul li h3{
+    cursor: pointer;
+    font-size: 50px;
+}
+.list-footer ul li h3:hover{
+    color: red;
+    transition: all 0.3s ease-in-out;
+}
 .list-footer ul li a{
     font-size: 20px;
     text-decoration: none;
     color: black;
 
+}
+
+.list-footer ul li a:hover{
+    padding: 10px;
+    transition: all 0.3s ;
+    background-color: black;
+    border-radius: 20px;
+    color: white;
 }
 
 
@@ -397,20 +410,15 @@ footer img{
     background-color: antiquewhite;
     margin-left: 100px;
 }
-@media screen and(max-width: 1200px) {
-    *{
-        background-color: red;
-    }
+@media screen and (max-width: 1342px) {
     .container-box{
         grid-template-columns: repeat(2,1fr);
     }
     
 }
 /* tablat */
-@media screen and (max-width : 1023px) and (min-width:768px) {
-    .container{
-        height: 70vh;
-    }
+@media screen and (max-width : 1023px){
+
     .container-box{
         margin: 20px;
         grid-template-columns: repeat(2,1fr);
@@ -497,10 +505,7 @@ footer img{
     #logo h1{
         font-size: 30px;
     }
-    .container{
-        height: 300px;
-        background-image: url('./image/header.gif');
-    }
+
     #content h2{
         margin-top: 100px;
         font-size: 20px;
