@@ -226,4 +226,72 @@ const sendOTPverificationEmail = async({_id, email}, res)=>{
     }
 }
 
+
+router.post('/verify', async(req, res)=>{
+    try{
+        let {userId , otp} = req.body
+        if(!userId || !otp){
+            throw Error('Empty otp detail are not allowed')
+        }else{
+            const userVerificationRecords = await userVerification.find({
+                userId
+            })
+            if(userVerificationRecords.length <=0){
+                throw new Error("Account record does't exist or has been verified already. Please sign up or login")
+            }else{
+                const {expiresAt} = userVerificationRecords[0].otp
+                const hashedOTP = userVerificationRecords[0].otp
+                if(expiresAt < Date.now()){
+                    await userVerification.deleteMany({userId})
+                    throw new Error("Code has expires . Please request again.")
+                }else{
+                    const vaildOTP = await bcrypt.compare(otp, hashedOTP)
+
+                    if(!vaildOTP){
+                        //supplied otp is wrong
+                        throw new Error("Invaild code passed. Cheack your inbox.")
+                    }else{
+                        //successful...
+                        await userModel.updateOne({_id: userId}, {verify: true})
+                        await userVerification.deleteMany({userId})
+                        res.status(201).json({
+                            status: 'VERIFIED',
+                            message: 'User email verified successfully'
+                        })
+                    }
+                }
+
+            }
+        }
+
+    }catch(error){
+        console.log(error)
+        res.status(500).json(
+            {
+                status: "FALIED",
+                message :error.message
+            }
+        )
+    }
+})
+
+router.post('/resend', async ( req,res)=>{
+    try{
+        let { userId , email} = req.body
+
+        if(!userId || !email){
+            throw Error("Empty user detali are not allowed")
+        }else{
+            //delete existing records and resend
+            await userVerification.deleteMany({userId})
+            sendOTPverificationEmail({_id: userId,email}, res)
+        }
+
+    }catch(error ){
+        res.status(500).json({
+            status: 'FALIED',
+            message : error.message
+        })
+    }
+})
 module.exports = router
