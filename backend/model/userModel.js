@@ -1,8 +1,6 @@
 const mongoose = require('mongoose')
 
 const userSchema = mongoose.Schema({
-
-    _id: mongoose.Schema.Types.ObjectId,
     name: {
         type :String,
         required: true
@@ -17,13 +15,9 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    date_create:{
+    createAt:{
         type: Date,
         default: Date.now()
-    },
-    emailToken:{
-        type: String,
-        required: true
     },
     isVerified:{
         type: Boolean,

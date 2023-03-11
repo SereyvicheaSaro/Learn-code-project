@@ -3,17 +3,14 @@ const mongoose = require('mongoose')
 const router = express.Router()
 const bcrypt = require('bcrypt')
 const userModel = require('./../model/userModel')
-
+const jwt = require('jsonwebtoken')
+const crypto = require('crypto')
+const nodeemailer = require('nodemailer')
 
 //sign up account
-router.get('/signup', (req, res, next)=>{
-    res.status(200).json({
-        message: 'You get'
-    })
-})
 
 router.post('/signup', (req, res, next)=>{
-    let { name , email , password} = req.body
+    let { name , email , password } = req.body
 
     name = name.trim();
     email = email.trim();
@@ -60,13 +57,15 @@ router.post('/signup', (req, res, next)=>{
                         name,
                         email,
                         password : passwordHash,
-
-                        _id: new mongoose.Types.ObjectId(),
+                        isVerified: false,
         
                     })
                     user.save()
                     .then(result=>{
-                        sendVerificationEmail(result, res,next)
+                        res.status(201).json({
+                            status: 'SUCCESSFUL',
+                            message: 'Create account done'
+                        })
                     })
                     .catch(error =>{
                         console.log(error)
@@ -96,12 +95,14 @@ router.post('/signup', (req, res, next)=>{
     }
 })
 
+const createToken = (id) =>{
+    return jwt.sign({id}, JWT_SECRET)
+}
 
 router.post('/signin', (req, res,next)=>{
     let {email ,password} = req.body
     email = email.trim()
     password = password.trim()
-
 
     if(email =="" || password == "")
     {
@@ -111,6 +112,7 @@ router.post('/signin', (req, res,next)=>{
         })
     }else{
         userModel.find({email})
+        
         .then(result =>{
             if(result){
                 //user exists
@@ -121,6 +123,7 @@ router.post('/signin', (req, res,next)=>{
                         res.status(200).json({
                             status: 'SUCCESSFUL',
                             message : 'Sign in successful..'
+
                         })
                     }else{
                         res.status(404).json({
