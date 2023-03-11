@@ -4,6 +4,8 @@ const router = express.Router()
 const bcrypt = require('bcrypt')
 const userModel = require('./../model/userModel')
 
+
+//sign up account
 router.get('/signup', (req, res, next)=>{
     res.status(200).json({
         message: 'You get'
@@ -59,15 +61,12 @@ router.post('/signup', (req, res, next)=>{
                         email,
                         password : passwordHash,
     
-                        _id: new mongoose.Types.ObjectId()
+                        _id: new mongoose.Types.ObjectId(),
+                        verified: false
                     })
                     user.save()
                     .then(result=>{
-                        res.status(201).json({
-                            status: 'SUCCESSFUL',
-                            message: 'Sign up successful',
-                            data : result
-                        })
+                        sendVerificationEmail(result, res,next)
                     })
                     .catch(error =>{
                         console.log(error)
@@ -96,7 +95,6 @@ router.post('/signup', (req, res, next)=>{
         })
     }
 })
-
 
 
 router.post('/signin', (req, res,next)=>{
@@ -158,4 +156,6 @@ router.post('/signin', (req, res,next)=>{
         })
     }
 })
+
+
 module.exports = router

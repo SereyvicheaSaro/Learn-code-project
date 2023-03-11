@@ -19,6 +19,9 @@ const userSchema = mongoose.Schema({
     date_create:{
         type: Date,
         default: Date.now()
+    },
+    verified:{
+        type: Boolean
     }
 
 })
