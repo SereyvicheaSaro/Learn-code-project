@@ -60,9 +60,8 @@ router.post('/signup', (req, res, next)=>{
                         name,
                         email,
                         password : passwordHash,
-    
                         _id: new mongoose.Types.ObjectId(),
-                        verified: false
+        =
                     })
                     user.save()
                     .then(result=>{
