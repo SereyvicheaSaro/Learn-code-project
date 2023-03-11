@@ -12,6 +12,7 @@ const userSchema = mongoose.Schema({
         unique : true,
         required: true
     },
+
     password: {
         type: String,
         required: true
@@ -20,6 +21,15 @@ const userSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
+    emailToken:{
+        type: String,
+        required: true
+    },
+    isVerified:{
+        type: Boolean,
+        required: true
+    },
+
 
 
 })
