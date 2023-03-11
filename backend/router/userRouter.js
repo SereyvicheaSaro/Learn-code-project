@@ -12,10 +12,10 @@ const userVerification = require('./../model/userVerification')
 
 const {v4: uuidv4} = require('uuid')
 let transporter = nodeemailer.createTransport({
-    host: "learnCode@gmail.com",
+    service: 'gmail',
     auth:{
-        user: process.env.AUTH_EMAIL,
-        pass: process.env.AUTH_PASS
+        user: 'kl195070@gmail.com',
+        pass: 'ojbxvksxcuasigqp'
     }
 })
 transporter.verify((error , successful)=>{
@@ -178,7 +178,7 @@ const sendOTPverificationEmail = async({_id, email}, res)=>{
     try{
         const otp = `${Math.floor(1000 + Math.random() * 9000)}`
         const mailOption = {
-            from:  process.env.AUTH_EMAIL,
+            from:  'kl195070@gmail.com',
             to: email,
             subject: 'Verify your email',
             html: 
@@ -201,7 +201,7 @@ const sendOTPverificationEmail = async({_id, email}, res)=>{
 
         await newOTPverification.save()
         await transporter.sendMail(mailOption)
-        res.status(201).json({
+        res.json({
             status: 'PENDING',
             message: 'Verificaiton otp email send',
             data :{

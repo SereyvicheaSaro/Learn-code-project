@@ -19,11 +19,7 @@ const userSchema = mongoose.Schema({
         type: Date,
         default: Date.now()
     },
-    isVerified:{
-        type: Boolean,
-        required: true
-    },
-
+    isVerified: Boolean
 
 
 })
