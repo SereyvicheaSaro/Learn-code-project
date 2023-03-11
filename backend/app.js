@@ -43,5 +43,5 @@ async function connect(){
     }
 }
 connect()
-app.use('/', userRouter )
+app.use('/user', userRouter )
 module.exports = app
