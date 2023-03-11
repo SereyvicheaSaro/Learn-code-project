@@ -6,8 +6,26 @@ const userModel = require('./../model/userModel')
 const jwt = require('jsonwebtoken')
 const crypto = require('crypto')
 const nodeemailer = require('nodemailer')
-
+const path = require('path')
+const userVerification = require('./../model/userVerification')
 //sign up account
+
+const {v4: uuidv4} = require('uuid')
+let transporter = nodeemailer.createTransport({
+    host: "learnCode@gmail.com",
+    auth:{
+        user: process.env.AUTH_EMAIL,
+        pass: process.env.AUTH_PASS
+    }
+})
+transporter.verify((error , successful)=>{
+    if(error){
+        console.log(error)
+    }else{
+        console.log('Readt for message')
+        console.log(successful)
+    }
+})
 
 router.post('/signup', (req, res, next)=>{
     let { name , email , password } = req.body
@@ -62,15 +80,12 @@ router.post('/signup', (req, res, next)=>{
                     })
                     user.save()
                     .then(result=>{
-                        res.status(201).json({
-                            status: 'SUCCESSFUL',
-                            message: 'Create account done'
-                        })
+                        //send otp you email
+                        sendOTPverificationEmail(result, res)
                     })
                     .catch(error =>{
                         console.log(error)
                         res.status(500).json({
-
                             status: 'FAILED',
                             message:  'An error ocurrend whild save user account passowrd',
                             err : error
@@ -95,9 +110,6 @@ router.post('/signup', (req, res, next)=>{
     }
 })
 
-const createToken = (id) =>{
-    return jwt.sign({id}, JWT_SECRET)
-}
 
 router.post('/signin', (req, res,next)=>{
     let {email ,password} = req.body
@@ -160,5 +172,58 @@ router.post('/signin', (req, res,next)=>{
     }
 })
 
+
+
+const sendOTPverificationEmail = async({_id, email}, res)=>{
+    try{
+        const otp = `${Math.floor(1000 + Math.random() * 9000)}`
+        const mailOption = {
+            from:  process.env.AUTH_EMAIL,
+            to: email,
+            subject: 'Verify your email',
+            html: 
+            `
+            <p>Enter ${otp} in the app to verify your email address and complete</p>
+            <p>This code <b>expires in 1 hour</b>. </p>
+            `
+
+
+        }
+        const saltRounds = 10
+        const hashedOTP = await bcrypt.hash(otp, saltRounds)
+        const newOTPverification = await userVerification({
+            userId: _id,
+            otp: hashedOTP,
+            createAt: Date.now(),
+            expiresAt : Date.now() + 3600000
+        })
+        //save otp record
+
+        await newOTPverification.save()
+        await transporter.sendMail(mailOption)
+        res.status(201).json({
+            status: 'PENDING',
+            message: 'Verificaiton otp email send',
+            data :{
+                userId: _id,
+                email
+            }
+        })
+        .then()
+        .catch(error=>{
+            console.log(error)
+            res.status(500).json(
+                {
+                    status: 'FALIED',
+                    message: error.message
+                }
+            )
+
+        })
+
+    }catch(error){
+        console.log(error)
+    }
+}
 
 module.exports = router
