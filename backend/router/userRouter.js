@@ -27,6 +27,9 @@ transporter.verify((error , successful)=>{
     }
 })
 
+
+
+
 router.post('/signup', (req, res, next)=>{
     let { name , email , password } = req.body
 
@@ -111,10 +114,10 @@ router.post('/signup', (req, res, next)=>{
 })
 
 
-router.post('/signin', (req, res,next)=>{
+router.post('/login', (req, res,next)=>{
     let {email ,password} = req.body
-    email = email.trim()
-    password = password.trim()
+    // email = email.trim()
+    // password = password.trim()
 
     if(email =="" || password == "")
     {
@@ -137,6 +140,7 @@ router.post('/signin', (req, res,next)=>{
                             message : 'Sign in successful..'
 
                         })
+                        console.log(`${email} and ${password}`)
                     }else{
                         res.status(404).json({
                             status: 'FALIED',
@@ -275,6 +279,8 @@ router.post('/verify', async(req, res)=>{
     }
 })
 
+
+//send otp again
 router.post('/resend', async ( req,res)=>{
     try{
         let { userId , email} = req.body
