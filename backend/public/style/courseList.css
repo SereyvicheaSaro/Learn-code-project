@@ -1,0 +1,47 @@
+.contanierCourseList{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+}
+.description-course h1{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 50px;
+
+}
+.description-course p{
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30px;
+}
+.contanierCourseList img{
+    width: 50%;
+}
+.description{
+    width: 400px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.description h1{
+    font-size: 50px;
+    padding: 20px;
+
+}
+.description p{
+    padding: 20px;
+}
+.description button{
+    padding: 20px;
+    margin: 20px;
+    width: 300px;
+    font-weight: bold;
+    border: none;
+}
+
+.description button:hover{
+    cursor: pointer;
+    color: white;
+    border-radius: 10px;
+    transition: all 0.3s;
+    border: none;
+    background-color: greenyellow;
+}
