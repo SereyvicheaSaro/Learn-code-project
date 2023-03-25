@@ -8,10 +8,12 @@ const userRouter= require('./router/userRouter')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(morgan('dev'))
+const ejs = require('ejs')
+
 const path = require('path')
 
 
-
+app.set('view engine', 'ejs')
 app.use((req, res, next) =>{
     res.header("Access-Control-Allow-Origin", "*")
     req.header(
@@ -52,4 +54,4 @@ connect()
 app.use(express.static(__dirname + '/public'))
 
 app.use('/', userRouter )
-module.exports = app
+module.exports = app    

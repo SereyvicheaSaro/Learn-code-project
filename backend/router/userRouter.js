@@ -8,6 +8,7 @@ const crypto = require('crypto')
 const nodeemailer = require('nodemailer')
 const path = require('path')
 const userVerification = require('./../model/userVerification')
+
 //sign up account
 
 const {v4: uuidv4} = require('uuid')
