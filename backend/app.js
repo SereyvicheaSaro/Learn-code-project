@@ -5,6 +5,7 @@ const morgan = require('morgan')
 const app = express()
 const url = 'mongodb+srv://Rotha:Rotha@cluster0.hxnopta.mongodb.net/?retryWrites=true&w=majority'
 const userRouter= require('./router/userRouter')
+const videoFlutter = require('./router/flutterVideo')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(morgan('dev'))
@@ -49,9 +50,10 @@ async function connect(){
     }
 }
 connect()
-
-
+//read file
 app.use(express.static(__dirname + '/public'))
 
+
 app.use('/', userRouter )
+app.use('/', videoFlutter)
 module.exports = app    
