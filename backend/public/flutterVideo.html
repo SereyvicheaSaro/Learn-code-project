@@ -5,13 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flutter Course</title>
+    <link rel="stylesheet" href="./style/flutterVideo.css">
+    
 </head>
 <body>
 
-    <video id="videoPlayer" controls autoplay>
-        <source src="/videoFlutter" type="video/mp4"/>
-        
+    <div class="container">
+        <div class="main-video-container">
+            <video class="main-video"  src="/videoFlutter" width="1080px" loop controls autoplay poster="./image/flutter-banner.jpg">
+                
+            
+            </video>
+            <h3 class="main-title">Your name video</h3>
+        </div>
 
-    </video>
+
+        <div class="video-list-container">
+
+            <div class="list active">
+                <video class="list-video"  src="/videoFlutter" poster="./image/flutter-banner.jpg">
+                    
+                </video>
+                <h3 class="list-title">flutter 1</h3>
+            </div>
+            <div class="list">
+                <video class="list-video"  src="/videoTest" poster="./image/css banner.jpg">
+                
+                  
+        
+                </video>
+                <h3 class="list-title">flutter 2</h3>
+            </div>
+            <div class="list">
+                <video class="list-video" src="/videoTest" poster="image/html banner.png">
+            
+        
+                </video>
+                <h3 class="list-title">flutetr 3</h3>
+            </div>
+        </div>
+    </div>
+
+   
+
+    <script src="./javascrip/videoFlutter.js"></script>
 </body>
 </html>
