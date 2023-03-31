@@ -10,7 +10,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
-
+    <!-- icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script defer src="./javascrip/index.js"></script>
 
 </head>
 <body>
@@ -54,22 +57,28 @@
       <img src="./image/logo.jpg" alt="learn code">
     </div>
 
-    <div id="content">
-      <h2>
-        Learn Code is website for share education
-        programming language for student is study at university .
-      </h2>
+    <section class="hidden">
+      <div id="content">
+        <h2>
+          Learn Code is website for share education
+          programming language for student is study at university .
+        </h2>
+  
+      </div>
+    </section>
 
-    </div>
-    <div id="question">
-      <h1>What's programming language?</h1>
-    </div>
-    <div class="text-box">
-      <p>A programming language is a computer language that is used by programmers (developers) to communicate with computers. It is a set of instructions written in any specific language ( C, C++, Java, Python) to perform a specific task.
-        Play Video
-        
-        A programming language is mainly used to develop desktop applications, websites, and mobile applications.</p>
-    </div>
+
+    <section class="hidden">
+      <div id="question">
+        <h1>What's programming language?</h1>
+      </div>
+      <div class="text-box">
+        <p>A programming language is a computer language that is used by programmers (developers) to communicate with computers. It is a set of instructions written in any specific language ( C, C++, Java, Python) to perform a specific task.
+          Play Video
+          
+          A programming language is mainly used to develop desktop applications, websites, and mobile applications.</p>
+      </div>
+    </section>
 
 
     <div class="container-box">
@@ -205,25 +214,43 @@
 
 
     <footer>
-
-      <div class="list-footer">
-        <ul>
-          <li>
-            <h3>Learn Code</h3>
-          </li>
-          <li>
-            <a href="" class="active">About us</a>
-          </li>
-          <li>
-            <a href="">content</a>
-          </li>
-          <li>
-            <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="" class="yt"><i class="fa-brands fa-youtube"></i></a>
-          </li>
-        </ul>
+      <div class="waves">
+        <div class="wave" id="wave1">
+        </div>
+        <div class="wave" id="wave2">
+        </div>
+        <div class="wave" id="wave3">
+        </div>
+        <div class="wave" id="wave4">
+        </div>
       </div>
 
+
+      <ul class="list_item_icon">
+        <li>
+          <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+        </li>
+        <li>
+          <a href="#"><ion-icon name="logo-youtube"></ion-icon></a>
+        </li>
+      </ul>
+
+      <ul class="menu">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">About us</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+
+      <p>Copy right by LearnCode</p>
     </footer>
 
 

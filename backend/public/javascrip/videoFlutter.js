@@ -7,7 +7,5 @@ videoList.forEach(video =>{
         document.querySelector('.main-video-container .main-video').play();
         document.querySelector('.main-video-container .main-title').innerHTML = title;
 
-
-
     };
 });

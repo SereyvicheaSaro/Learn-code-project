@@ -7,6 +7,8 @@ router.get('/videoFlutter' , (req, res , next)=>{
     if (!range) {
         res.status(400).send("Requires Range header");
     }
+
+
     const videoPath = './video/test.mp4'
     const videoSize = fs.statSync(videoPath).size
    
@@ -25,6 +27,7 @@ router.get('/videoFlutter' , (req, res , next)=>{
     res.writeHead(206 , header)
 
     const stream = fs.createReadStream(videoPath , {start,end})
+    
     stream.pipe(res)
 
 
