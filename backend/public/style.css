@@ -335,7 +335,7 @@ nav{
     line-height: 40px 0;
     text-transform: capitalize;
     font-weight: 300;
-    margin: 40px 0;
+    margin: 10px 0;
 }
 .card-c .card-text-c .btn
 {
@@ -350,137 +350,320 @@ nav{
 }
 
 
-.c-plus{
+/* c++ programming */
+.card-cpp {
+
+    height: 400px;
+    overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    
-    margin: 10px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    margin: 20px;
+    position: relative;
+
+}
+.card-cpp .card-img{
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    display: grid;
-    justify-content:center;
-
+    justify-content: center;
 }
-.c-plus img{
-    margin: 10px 250px;
-    width: 25%;
+.card-cpp img{
+    /* margin-left: 54px; */
+    width:50%;
+    object-fit: cover;
 }
-
-.c-plus .text-cplus p{
-    margin: 20px;
-    text-indent: 30px;
-    padding: 10px;
-}
-.text-cplus h1{
-    margin: 20px;
-    font-size: 25px;
-    padding: 10px;
-}
-
-.html{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    
-    display: grid;
+.card-cpp .card-text-cpp{
     align-items: center;
-    justify-content:center;
-    margin: 10px;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
 }
-.html img{
-    width: 35%;
-    margin: 10px 180px;
+.card-cpp .card-text-cpp h1{
+    font-size: 30px;
+    font-weight: 500;
+
 }
-.text-html h1{
-    margin: 20px;
-    padding: 10px ;
-    font-size: 25px;
+.card-cpp .card-text-cpp p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
 }
-.text-html p{
-    margin: 20px;
-    padding: 10px;
-    text-indent: 30px;
+.card-cpp .card-text-cpp .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
 }
 
+.card-cpp:hover .card-text-cpp{
+    right: 0;
+    cursor: pointer;
 
+}
 
+/* html */
 
+.card-html {
 
-.css {
+    height: 400px;
+    overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgb(255, 255, 255);
-    margin: 10px;
     border-radius: 10px;
+    background-color: rgb(255, 255, 255);
     display: grid;
-}
-.css .text-css p{
     margin: 20px;
-    padding: 10px;
-    text-indent: 30px;
+    position: relative;
 
 }
-.text-css h1{
-    margin: 20px;
-    font-size: 25px;
-    padding: 10px;
+.card-html .card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
-.css img{
-    margin: 10px 130px;
-    width: 60%;
+.card-html img{
+    /* margin-left: 54px; */
+    width:50%;
+    object-fit: cover;
+}
+.card-html .card-text-html{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card-html .card-text-html h1{
+    font-size: 30px;
+    font-weight: 500;
+
+}
+.card-html .card-text-html p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card-html .card-text-html .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
 }
 
+.card-html:hover .card-text-html{
+    right: 0;
+    cursor: pointer;
 
+}
+/* css */
+.card-css {
 
-
-.node{
+    height: 400px;
+    overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgb(255, 255, 255);
-    margin: 10px;
     border-radius: 10px;
+    background-color: rgb(255, 255, 255);
     display: grid;
-}
-.node img{
-
-    margin: 10px 100px;
-    width: 60%;
-}
-
-.text-node p{
     margin: 20px;
-    padding: 10px;
-    text-indent: 30px;
+    position: relative;
+
 }
-.text-node h1{
-    margin: 20px;
-    font-size: 25px;
-    padding: 10px;
+.card-css .card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-css img{
+    /* margin-left: 54px; */
+    width:80%;
+    object-fit: cover;
+}
+.card-css .card-text-css{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card-css .card-text-css h1{
+    font-size: 30px;
+    font-weight: 500;
+
+}
+.card-css .card-text-css p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card-css .card-text-css .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
 }
 
-.react{
+.card-css:hover .card-text-css{
+    right: 0;
+    cursor: pointer;
+
+}
+
+/* react js */
+.card-react {
+
+    height: 400px;
+    overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    background-color: rgb(255, 255, 255);
     border-radius: 10px;
-    margin: 10px;
-
+    background-color: rgb(255, 255, 255);
     display: grid;
-
-}
-.react img{
-    margin: 10px 100px;
-    width: 60%;
-}
-
-
-.text-react p{
     margin: 20px;
-    text-indent: 30px;
-    padding: 10px;
+    position: relative;
+
+}
+.card-react .card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-react img{
+    /* margin-left: 54px; */
+    width:70%;
+    object-fit: cover;
+}
+.card-react .card-text-react{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card-react .card-text-react h1{
+    font-size: 30px;
+    font-weight: 500;
+
+}
+.card-react .card-text-react p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card-react .card-text-react .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
 }
 
-.text-react h1{
+.card-react:hover .card-text-react{
+    right: 0;
+    cursor: pointer;
+
+}
+
+/* node js */
+
+.card-node {
+
+    height: 400px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
     margin: 20px;
-    font-size: 25px;
-    padding: 10px;
+    position: relative;
+
+}
+.card-node .card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-node img{
+    /* margin-left: 54px; */
+    width:60%;
+    object-fit: cover;
+}
+.card-node .card-text-node{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card-node .card-text-node h1{
+    font-size: 30px;
+    font-weight: 500;
+
+}
+.card-node .card-text-node p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card-node .card-text-node .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
+}
+
+.card-node:hover .card-text-node{
+    right: 0;
+    cursor: pointer;
+
 }
 
 footer{
