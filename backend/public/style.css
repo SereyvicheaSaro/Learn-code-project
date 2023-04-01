@@ -78,6 +78,7 @@ nav{
     margin: 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
+
 }
 
 
@@ -156,90 +157,196 @@ nav{
     text-align: center;
 }
 
+/* //.flutter */
+.card {
 
-.flutter {
+    height: 400px;
+    overflow: hidden;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     border-radius: 10px;
     background-color: rgb(255, 255, 255);
     display: grid;
     margin: 20px;
 }
-
-.flutter .text-flutter{
-    margin: 20px;
-    padding: 10px;
-}
-.flutter .text-flutter h1{
-    margin: 20px;
-    font-size: 30px;
-    padding: 10px;
-
-}
-.flutter .text-flutter p{
-    padding: 10px;
-    text-indent: 30px;
-}
-.flutter img{
-    margin: 10px 180px;
-    padding:10px;
-    width: 35%;
-}
-
-.java {
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
-    justify-content: center;
-    margin: 10px;
-    padding: 10px;
-    display: grid;
-    
-
-}
-.java img{
-    margin: 10px 50px;
-    width: 80%;
-    padding: 10px;
-}
-
-.java .text-java p{
-    margin: 20px;
-    padding: 10px;
-    text-indent: 30px;
-}
-
-.java .text-java h1{
-    margin: 20px;
-    font-size: 25px;
-    padding: 10px;
-}
-
-
-
-.c-programming{
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    margin: 20px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 10px;
-    margin: 10px;
-    display: grid;
+.card .card-img{
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
-.c-programming .text-c p{
-    margin: 20px;
-    padding: 10px;
-    text-indent: 30px;
-
-}
-.c-programming img{
-    margin: 10px 200px;
-    width: 30%;
+.card img{
+    /* margin-left: 54px;
+    margin-top: 10px; */
+    width:50%;
+    margin-right: 50px;
+    /* object-fit: cover; */
 }
 
-.c-programming .text-c h1{
+.card .card-text{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card .card-text h1{
+    font-size: 30px;
+    font-weight: 500;
+
+}
+.card .card-text p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card .card-text .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
+}
+
+.card:hover .card-text{
+    right: 0;
+    cursor: pointer;
+
+}
+
+/* java */
+.card-java {
+
+    height: 400px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
     margin: 20px;
-    font-size: 25px;
-    padding: 10px;
+    position: relative;
+
+}
+.card-java .card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-java img{
+    /* margin-left: 54px; */
+    margin-top: 30px;
+    width:100%;
+    object-fit: cover;
+}
+.card-java .card-text-java{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card-java .card-text-java h1{
+    font-size: 30px;
+    font-weight: 500;
+
+}
+.card-java .card-text-java p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card-java .card-text-java .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
+}
+
+.card-java:hover .card-text-java{
+    right: 0;
+    cursor: pointer;
+
+}
+
+
+/* c .c-programming */
+.card-c {
+    height: 400px;
+    overflow: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    display: grid;
+    margin: 20px;
+    position: relative;
+
+}
+.card-c .card-img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.card-c img{
+    /* margin-left: 54px; */
+    
+    width:60%;
+    object-fit: cover;
+}
+.card-c .card-text-c{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    position: absolute;
+    background-color: #03055a59;
+    backdrop-filter: blur(5px);
+    padding: 30px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    transition: 2s;
+}
+.card-c .card-text-c h1{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+.card-c .card-text-c p{
+    line-height: 40px 0;
+    text-transform: capitalize;
+    font-weight: 300;
+    margin: 40px 0;
+}
+.card-c .card-text-c .btn
+{
+    width: 100%;
+    background-color: #CED4DA;
+}
+
+.card-c:hover .card-text-c{
+    right: 0;
+    cursor: pointer;
+
 }
 
 

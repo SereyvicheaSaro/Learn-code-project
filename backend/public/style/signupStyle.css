@@ -6,6 +6,8 @@
 body{
     min-height: 100vh;
     display: flex;
+    background-image: url(./../image/signup.gif);
+    background-size: cover;
 }
 
 .contaner{
