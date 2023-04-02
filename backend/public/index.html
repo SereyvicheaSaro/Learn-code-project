@@ -17,36 +17,39 @@
 
 </head>
 <body>
-    <nav>
-        <div id="logo">
-          <h1>Learn Code</h1>
+    <header>
+      <div class="logo-nav">
+        <h1>LearnCode</h1>
+      </div>
+      <input type="checkbox" id="nav-check" hidden>
+      <nav>
+        <div class="logo-nav">
+          <h1>LearnCode</h1>
         </div>
-        
-          <div class="list">
-            <ul>
-              <li>
-                <a href="" class="active">Home</a>
-              </li>
-              <li>
-                <a href="">About us</a>
-              </li>
-              <li>
-                <a href="">Contact</a>
-              </li>
-              <li>
-                <a href="./courseList.html">Course</a>
-              </li>
-              <li>
-                <a href="./login.html">Login</a>
-              </li>
-
-            </ul>
-          </div>
-          <div class="icon">
-            <i class="fa-solid fa-bars"></i>
-          </div>
-        
+        <ul>
+          <li>
+            <a href="./index.html" class="active">Home</a>
+          </li>
+          <li>
+            <a href="" onclick="router(event)">About us</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+          <li>
+            <a href="./courseList.html" onclick="route()">Course</a>
+          </li>
+          <li>
+            <a href="./login.html">Login</a>
+          </li>
+        </ul>
       </nav>
+      <label for="nav-check" class="humburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </label>
+    </header>
 
 
     <!-- <div class="container">
@@ -107,7 +110,7 @@
           <p>
             Java is a widely-used programming language for coding web applications. It has been a popular choice among developers for over two decades, with millions of Java applications in use today. Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. It is a fast, secure, reliable programming language for coding everything from mobile apps and enterprise software to big data applications and server-side technologies.
           </p>
-          <button class="btn">Read more</button>
+          <button class="btn" id="btn-java">Read more</button>
         </div>
       </div>
   
