@@ -4,14 +4,19 @@ const { default: mongoose } = require('mongoose')
 const morgan = require('morgan')
 const app = express()
 const url = 'mongodb+srv://Rotha:Rotha@cluster0.hxnopta.mongodb.net/?retryWrites=true&w=majority'
-const userRouter= require('./router/userRouter')
-const videoFlutter = require('./router/flutterVideo')
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended: false}))
-app.use(morgan('dev'))
-const ejs = require('ejs')
 
+app.use(morgan('dev'))
+app.use(express.urlencoded({extended: true}))
+const ejs = require('ejs')
 const path = require('path')
+
+
+
+const userRouter= require('./router/userRouter')
+const videoFlutter = require('./router/flutterVideo')
+const lessonJavaRouter = require('./router/lessonJavaRouter')
 
 
 app.set('view engine', 'ejs')
@@ -56,4 +61,5 @@ app.use(express.static(__dirname + '/public'))
 
 app.use('/', userRouter )
 app.use('/', videoFlutter)
+app.use('/lesson', lessonJavaRouter)
 module.exports = app    

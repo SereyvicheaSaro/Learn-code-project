@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
-const lessonJavaSchema = mongoose.Schema({
-    _lessonJavaId: mongoose.Types.ObjectId,
+const lessonJavaSchema =mongoose.Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     title:{
         type:String,
         required: true
@@ -11,11 +11,15 @@ const lessonJavaSchema = mongoose.Schema({
     },
     code: {
         type : String,
-        required: String
+        required: true
     },
     answer:{
         type : String,
         required: true
+    },
+    date: {
+        type: Date,
+        default :Date.now()
     }
 })
 
