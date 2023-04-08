@@ -136,12 +136,7 @@ router.post('/login', (req, res,next)=>{
                 bcrypt.compare(password, hashPassword)
                 .then(data =>{
                     if(data){
-                        res.status(200).json({
-                            status: 'SUCCESSFUL',
-                            message : 'Sign in successful..'
-
-                        })
-                        console.log(`${email} and ${password}`)
+                        return res.redirect("mainDashboard.html")
                     }else{
                         res.status(404).json({
                             status: 'FALIED',

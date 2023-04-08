@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+*{
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #EDF2F4;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns:230px 1fr;
+    grid-template-rows: 60px 1fr;
+}
+a{
+    color: black;
+}
+.logo h1{
+    font-size: 1.4rem;
+}
+.sidebar a{
+    font-size: 0.9rem;
+}
+small {
+    font-size: 0.75rem;
+}
+.container{
+    display: grid;
+    margin: 0 auto;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto 23rem;
+}
+
+/* aside */
+aside{
+    height: 100vh;
+    background-color: gray;
+}
+aside .top{
+    height: 10vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+aside .top .logo h1{
+    padding: 10px;
+}
+aside .icon{
+    display: none;
+}
+
+/* aside slidbar */
+
+aside .sidebar{
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    position: relative;
+}
+aside .sidebar h3{
+    font-weight: 500;
+}
+aside .sidebar a{
+    display: flex;
+    margin-left: 20px;
+    color: black;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+aside .sidebar a span{
+    font-size: 1.6rem;
+}
+
+aside .sidebar a.active{
+    background-color: #EDEDE9;
+    color: rgb(0, 0, 0);
+    margin-left: 0;
+}
+aside .sidebar a.active::before{
+    content: '';
+    width: 10px;
+    height: 100%;
+    background-color: #8338EC;
+}
+aside .sidebar a.active span{
+    color: black;
+    margin-left: calc(1rem - 3px);
+}
+aside .sidebar a:hover{
+    color: #8338EC;
+    margin-left: calc(1rem - 3px);
+}
+aside .sidebar a:hover span{
+    margin-left: 1rem;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: aqua;
+
+}
