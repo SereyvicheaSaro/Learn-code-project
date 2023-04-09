@@ -1,14 +1,29 @@
 async function fetchData() {
-    try {
-      const response = await fetch('http://localhost:5000/lesson/');
-      const data = await response.json();
-      // Do something with the data
-      console.log(data);
-      const {title , description , code , answer} =data;
-    } catch (error) {
-      // Handle any errors that occur
-      console.error(error);
+  fetch('http://localhost:5000/lesson/')
+  .then(res=>{
+    if(!res.ok){
+      throw Error('Error')
     }
-  }
-  
-  fetchData();
+    return res.json();
+  })
+  .then(data=>{
+    console.log(data.data);
+    let showAPI = "";
+    data.data.map((lessonJava)=>{
+      showAPI += `<div>
+      <h3 class="title">${lessonJava.title}</h3>
+      <p class ="description">${lessonJava.description}</p>
+      <pre class="pre-code">
+          <code class="language-java">${lessonJava.code}</code>
+      </pre>
+      <p class ="answer">${lessonJava.answer}</p>
+      </div>`
+    });
+    document.getElementById('showAPI').innerHTML = showAPI;
+  })
+  .catch(error =>{
+    console.log(error);
+  })
+    
+}
+fetchData();

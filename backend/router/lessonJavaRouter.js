@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const lessonJavaModel = require('./../model/lessonJavaModel')
 const mongoose = require('mongoose')
-
+const hljs = require('highlight.js');
 
 
 router.get('/', (req,res, next)=>{
@@ -21,13 +21,14 @@ router.get('/', (req,res, next)=>{
 })
 
 router.post("/", (req,res, next)=>{
- 
+
+    const highlightedCode = hljs.highlight('javascript', req.body.code).value;
     const newLessonJava = new lessonJavaModel({
         _id :new mongoose.Types.ObjectId(),
     
         title : req.body.title,
         description : req.body.description,
-        code : req.body.code,
+        code : highlightedCode,
         answer : req.body.answer
     });
     newLessonJava.save()
