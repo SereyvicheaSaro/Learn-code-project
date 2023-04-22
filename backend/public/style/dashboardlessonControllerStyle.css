@@ -1,0 +1,64 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+body{
+    background-color: #EDF2F4;
+}
+.contaner{
+    width: 200vh;
+    background-color: white;
+}
+.contaner h1{
+    margin: 20px;
+    
+    font-size: 40px;
+    font-weight: 500;
+}
+
+label{
+    font-size: 20px;
+}
+.form-group{
+    margin: 20px;
+    display: grid;
+}
+.save{
+    width: 78%;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+}
+.save:hover{
+    background-color: greenyellow;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+textarea{
+    font-size: 16px;
+    margin-top: 20px;
+    height: 59px;
+    width: 80%;
+    border-radius: 5px;
+    outline: none;
+    resize: none;
+    padding: 15px;
+    font-size: 16px;
+    background-color: #EDF2F4;
+    border-color: #bfbfbf;
+}
+textarea:is(:focus , :valid){
+    border-width: 2px;
+    border-color: #4671EA;
+    padding: 15px;
+}
+textarea::-webkit-scrollbar{
+    width: 0px;
+}

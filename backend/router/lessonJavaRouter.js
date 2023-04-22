@@ -22,7 +22,7 @@ router.get('/', (req,res, next)=>{
 
 router.post("/", (req,res, next)=>{
 
-    const highlightedCode = hljs.highlight('javascript', req.body.code).value;
+    const highlightedCode = hljs.highlight('java', req.body.code).value;
     const newLessonJava = new lessonJavaModel({
         _id :new mongoose.Types.ObjectId(),
     

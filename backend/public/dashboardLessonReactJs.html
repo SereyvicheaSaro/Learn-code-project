@@ -5,30 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>react js</title>
+    <link rel="stylesheet" href="style/dashboardlessonControllerStyle.css">
 </head>
 <body>
     <div class="contaner">
-        <form action="/" method="post">
-            <h1>Insert Lesson React js</h1>
+        <form action="/lesson/" method="post">
+            <h1>Insert Lesson Java</h1>
             <div class="form-group">
                 <label for="">Title</label>
-                <input type="text" name="title" id="title" class="form-controll" placeholder="title" required>
+                <textarea name="title" id="title" placeholder="Enter title" required></textarea>
+        
             </div>
             <div class="form-group">
                 <label for="">Description</label>
-                <input type="text" name="description" id="description" class="form-controll" placeholder="description" required>
+                <textarea name="description" id="description" placeholder="Enter description" required></textarea>
             </div>
             <div class="form-group">
                 <label for="">Code</label>
-                <input type="text" name="code" id="code" class="form-controll" placeholder="code" required>
+                <textarea name="code" id="code" class="form-controll" placeholder="Enter code" required></textarea>
             </div>
             <div class="form-group">
                 <label for="">Answer</label>
-                <input type="text" name="answer" id="answer" class="form-controll" placeholder="answer" required>
+                <textarea name="answer" id="answer" placeholder="Enter answer" required></textarea>
+
             </div>
             <input type="submit" value="save" class="save" id="save">
 
         </form>
     </div>
+    <script src="./javascrip/ControllerLesson.js"></script>
 </body>
 </html>
