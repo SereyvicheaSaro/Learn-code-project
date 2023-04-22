@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
-const reactjsSchema = mongoose.Schema({
+const { Schema } = mongoose;
+
+const reactjsSchema = new Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     title : {
         type: String,
         required: true
@@ -10,11 +13,11 @@ const reactjsSchema = mongoose.Schema({
     },
     code:{
         tpye: String,
-        required: true
+        // required: true
     },
     answer:{
         type :String,
-        required : true
+        // required : true
     },
     date: {
         type: Date,
@@ -22,4 +25,4 @@ const reactjsSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('lessonFluter', reactjsSchema)
+module.exports = mongoose.model('lessonReactJs', reactjsSchema)

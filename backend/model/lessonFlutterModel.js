@@ -1,20 +1,22 @@
 const mongoose = require('mongoose')
-const flutterSchema = mongoose.Schema({
+const { Schema } = mongoose;
+const flutterSchema =new Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     title : {
         type: String,
-        required: true
+        // required: true
     },
     description: {
         type :String,
-        required: true
+        // required: true
     },
     code:{
         tpye: String,
-        required: true
+        // required: true
     },
     answer:{
         type :String,
-        required : true
+        // required : true
     },
     date: {
         type: Date,

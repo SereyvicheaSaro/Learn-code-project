@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-const lessonJavaSchema =mongoose.Schema({
+const { Schema } = mongoose;
+const lessonJavaSchema = new Schema({
     _id: mongoose.Schema.Types.ObjectId,
     title:{
         type:String,

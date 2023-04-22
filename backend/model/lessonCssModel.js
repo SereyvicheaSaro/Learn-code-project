@@ -1,20 +1,22 @@
 const mongoose = require('mongoose')
-const cssSchema = mongoose.Schema({
+const { Schema } = mongoose;
+const cssSchema = new Schema({
+    _id: mongoose.Schema.Types.ObjectId,
     title : {
         type: String,
-        required: true
+        // required: true
     },
     description: {
         type :String,
-        required: true
+        // required: true
     },
     code:{
         tpye: String,
-        required: true
+        // required: true
     },
     answer:{
         type :String,
-        required : true
+        // required : true
     },
     date: {
         type: Date,
@@ -22,4 +24,4 @@ const cssSchema = mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('lessonFluter', cssSchema)
+module.exports = mongoose.model('lessonCss', cssSchema)

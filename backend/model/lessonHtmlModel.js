@@ -1,20 +1,22 @@
 const mongoose = require('mongoose')
-const htmlSchema = mongoose.Schema({
+const { Schema } = mongoose;
+const htmlSchema = new Schema({
+        _id: mongoose.Schema.Types.ObjectId,
     title : {
         type: String,
-        required: true
+        // required: true
     },
     description: {
         type :String,
-        required: true
+        // required: true
     },
     code:{
         tpye: String,
-        required: true
+        // required: true
     },
     answer:{
         type :String,
-        required : true
+        // required : true
     },
     date: {
         type: Date,
