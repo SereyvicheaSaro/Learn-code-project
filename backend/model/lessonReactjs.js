@@ -12,12 +12,12 @@ const reactjsSchema = new Schema({
         required: true
     },
     code:{
-        tpye: String,
-        // required: true
+        type : String,
+        required: true
     },
     answer:{
         type :String,
-        // required : true
+        required : true
     },
     date: {
         type: Date,

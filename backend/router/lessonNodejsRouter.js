@@ -22,7 +22,7 @@ router.get('/', (req,res, next)=>{
 
 router.post("/", (req,res, next)=>{
 
-    const highlightedCode = hljs.highlight('java', req.body.code).value;
+    const highlightedCode = hljs.highlight('nodejs', req.body.code).value;
     const newLessonJava = new lessonNodeJs({
         _id :new mongoose.Types.ObjectId(),
     
@@ -46,8 +46,8 @@ router.post("/", (req,res, next)=>{
     })
 })
 
-router.put('/:lessonJavaID', (req,res, next)=>{
-    lessonNodeJs.findByIdAndUpdate({_id: req.params.lessonJavaID}, {
+router.put('/:lessonNodeJsID', (req,res, next)=>{
+    lessonNodeJs.findByIdAndUpdate({_id: req.params.lessonNodeJsID}, {
         $set:{
             title : req.body.title,
             description : req.body.description,
@@ -67,8 +67,8 @@ router.put('/:lessonJavaID', (req,res, next)=>{
     })
 })
 
-router.get('/:lessonJavaID', (req, res , next )=>{
-    lessonNodeJs.findById(req.params.lessonJavaID)
+router.get('/:lessonNodeJsID', (req, res , next )=>{
+    lessonNodeJs.findById(req.params.lessonNodeJsID)
     .exec()
     .then(doc =>{
         if(doc){
@@ -87,8 +87,8 @@ router.get('/:lessonJavaID', (req, res , next )=>{
 })
 
 
-router.delete('/:lessonJavaID', (req, res, next)=>{
-    lessonReactJs.findByIdAndDelete({_id : req.params.lessonJavaID})
+router.delete('/:lessonNodeJsID', (req, res, next)=>{
+    lessonReactJs.findByIdAndDelete({_id : req.params.lessonNodeJsID})
     .exec()
     .then(doc =>{
         res.status(200).json({

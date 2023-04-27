@@ -36,3 +36,30 @@ textareaAnswer.addEventListener("keyup" , e =>{
     let scHeight = e.target.scrollHeight;
     textareaAnswer.style.height = `${scHeight}px`;
 });
+
+
+const urlAPI = "http://localhost:5000/flutter/";
+const getTitle = document.getElementById('get_Title');
+const getAnswer = document.getElementById('get_Answer');
+async function getDataFronApi(){
+    fetch(urlAPI)
+    .then(res=>{
+        if(!res.ok){
+            throw Error("Error");
+        }
+        return res.json();
+    })
+    .then(data =>{
+        console.log(data.data);
+        data.data.map((lesson)=>{
+            getTitle.textContent = lesson.title;
+            getAnswer.textContent = lesson.answer;
+
+        });
+    })
+    .catch(error =>{
+        console.log(error);
+    })
+}
+
+getDataFronApi();

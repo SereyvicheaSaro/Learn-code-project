@@ -10,7 +10,7 @@ router.get('/', (req,res, next)=>{
     .exec()
     .then(result=>{
         res.status(200).json({
-            message: 'lesson java',
+            message: 'lesson flutter',
             data: result
         })
     })
@@ -22,7 +22,7 @@ router.get('/', (req,res, next)=>{
 
 router.post("/", (req,res, next)=>{
 
-    const highlightedCode = hljs.highlight('java', req.body.code).value;
+    const highlightedCode = hljs.highlight('dart', req.body.code).value;
     const newLessonJava = new lessonFlutter({
         _id :new mongoose.Types.ObjectId(),
     
@@ -34,7 +34,7 @@ router.post("/", (req,res, next)=>{
     newLessonJava.save()
     .then((result)=>{
         res.status(201).json({
-            message : "create done",
+            message : "create done flutter",
             result : result
         })
     })
