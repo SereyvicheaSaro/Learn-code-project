@@ -15,7 +15,7 @@ const path = require('path')
 
 
 const userRouter= require('./router/userRouter')
-const videoFlutter = require('./router/flutterVideo')
+const videoFlutter = require('./router/router_lesson_video/flutterVideo')
 const lessonJavaRouter = require('./router/lessonJavaRouter')
 const lessonFlutterRouter = require('./router/lessonFlutterRouter')
 const lessonHtmlRouter = require('./router/lessonHtmlRouter')
