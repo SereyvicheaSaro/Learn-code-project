@@ -9,8 +9,6 @@ app.use(bodyParser.urlencoded({extended: false}))
 
 app.use(morgan('dev'))
 app.use(express.urlencoded({extended: true}))
-const ejs = require('ejs')
-const path = require('path')
 
 
 
