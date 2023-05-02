@@ -113,15 +113,20 @@ nav ul li a.active{
     grid-template: 
     "description logo";
     display: flex;
+    
 }
 .description{
     grid-area: description;
     width: 50vw;
-    height: 50vh;
     display: flex;
+    display: inline-block;
 }
-
+.description h1{
+    /* background-color: aqua; */
+    text-align: center;
+}
 .description p{
+    /* background-color: antiquewhite; */
     text-align: justify;
     margin-top: 10px;
     padding: 3%;
@@ -134,7 +139,12 @@ nav ul li a.active{
     display: flex;
 }
 .logo img{
-    width: 20%;
+    width: 50%;
     margin: auto;
-    padding: 0%;
+}
+.footer{
+    margin-top: 54px;
+    background-color: aqua;
+    width: 100vw;
+    height: 100px;
 }
