@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:wght@700&family=Ubuntu:wght@500&display=swap');
 *{
     padding: 0;
     margin: 0;
@@ -116,26 +117,35 @@ nav ul li a.active{
     
 }
 .description{
+    background-color: rgb(243, 242, 242);
+    margin-left: 10px;
+    box-shadow: 2px 2px 4px 1px rgba(0, 0, 0, 0.2);
     grid-area: description;
     width: 50vw;
     display: flex;
     display: inline-block;
+    border-radius: 10px;
 }
 .description h1{
-    /* background-color: aqua; */
+    font-family: 'Open Sans', sans-serif;
+    padding: 10px;
     text-align: center;
 }
 .description p{
-    /* background-color: antiquewhite; */
     text-align: justify;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     padding: 3%;
     font-size: 1.3em;
+}
+.line{
+    margin: auto;
+    width: 100px;
+    height: 5px;
+    background-color: #440F9A;
 }
 .logo{
     grid-area: logo;
     width: 50vw;
-    height: 50vh;
     display: flex;
 }
 .logo img{
@@ -143,8 +153,27 @@ nav ul li a.active{
     margin: auto;
 }
 .footer{
-    margin-top: 54px;
-    background-color: aqua;
-    width: 100vw;
-    height: 100px;
+    margin-top: 57px;
+    background-color: aqua; 
+    /* width: 100vw; */
+    height: 10vh;   
+    padding: 0px;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr ;
+    grid-template-areas: 
+    "p"
+    "img";
+}
+.footer p{
+    background-color: bisque;
+    grid-area: p;
+}
+.footer .img{
+    margin: auto;
+    grid-area: img;
+}
+.footer .img img{
+    background-color: black;
+    width: 3%;
 }
